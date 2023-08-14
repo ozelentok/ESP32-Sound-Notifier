@@ -3,6 +3,7 @@
 import argparse
 import socket
 import subprocess
+import syslog
 import traceback
 from datetime import datetime
 
@@ -17,7 +18,7 @@ def parse_args() -> argparse.Namespace:
 
 
 def notify(text: str) -> None:
-    print(text)
+    syslog.syslog(syslog.LOG_INFO, text)
     subprocess.run(['notify-send', '-u', 'critical', text])
 
 
