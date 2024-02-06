@@ -1,0 +1,9 @@
+[Unit]
+Description=Sound Notifier
+After=network-online.target
+
+[Service]
+ExecStart=[Notifier]/notifier/notifier.py [IP] 12100 [Secret] [Message]
+
+[Install]
+WantedBy=default.target
