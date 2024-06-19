@@ -1,0 +1,15 @@
+[project]
+name = "notifier"
+requires-python = ">= 3.10"
+readme = "../README.md"
+license = {file = "../LICENSE.txt"}
+
+[tool.ruff]
+line-length = 80
+target-version = "py310"
+
+[tool.ruff.format]
+quote-style = "preserve"
+indent-style = "space"
+skip-magic-trailing-comma = false
+line-ending = "auto"
